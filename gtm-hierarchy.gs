@@ -68,7 +68,7 @@ function buildSheet() {
   
   // If sheet doesn't exist, create it, otherwise empty it
   if (!sheet) {
-    SpreadsheetApp.getActiveSpreadsheet().insertSheet(sheetName);
+    sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet(sheetName);
   } else {
     sheet.clear();
   }
