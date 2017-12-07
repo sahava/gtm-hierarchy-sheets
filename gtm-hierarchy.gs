@@ -67,7 +67,7 @@ function buildSheet() {
   var hierarchy;
   
   // If sheet doesn't exist, create it, otherwise empty it
-  if (sheet === false) {
+  if (!sheet) {
     sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet(sheetName);
   } else {
     sheet.clear();
