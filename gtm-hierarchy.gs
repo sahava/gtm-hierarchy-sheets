@@ -63,11 +63,11 @@ function buildSheet() {
   // Name of the new sheet
   var sheetName = 'GTM Hierarchy';
   
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('GTM Hierarchy');
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
   var hierarchy;
   
   // If sheet doesn't exist, create it, otherwise empty it
-  if (!sheet) {
+  if (sheet === false) {
     sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet(sheetName);
   } else {
     sheet.clear();
